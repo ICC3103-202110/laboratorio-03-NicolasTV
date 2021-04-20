@@ -1,5 +1,5 @@
 from card import Card
 
-class Duke(Card):
+class Assassin(Card):
 
     def __init__(self, ):

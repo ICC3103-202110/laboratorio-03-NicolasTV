@@ -1,5 +1,6 @@
 from card import Card
 
-class Duke(Card):
+class Contessa(Card):
 
     def __init__(self, ):
+        

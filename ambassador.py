@@ -1,5 +1,5 @@
 from card import Card
 
-class Duke(Card):
+class Ambassador(Card):
 
     def __init__(self, ):
