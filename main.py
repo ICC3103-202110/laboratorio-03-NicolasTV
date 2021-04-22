@@ -1,62 +1,47 @@
 import random
 from player import Player
-from ambassador import Ambassador
-from assassin import Assassin
-from captain import Captain 
-from contessa import Contessa
-from duke import Duke
 
-players = []
-coins = []
-deck = []
-TURN = n_players - 1
-DECK_MAX = 3
+CONTINUE_PLAYING = True
 
 
-def start_game():
-
+def intro():
     print("\n·················· Welcome to Coup ··················")
-    print("This board game is played with a minimum of 3 players and a maximum of 4.\n")
+    print("This table game is played with at least 3 players, and"
+          " a maximum of 4.\n")
 
-    n_players = int(input("Enter the number of players:  "))
-    while n_players < 3 or n_players > 4:
+
+def create_players():
+    players_list = []
+
+    N_PLAYERS = int(input("\nEnter the number of players: "))
+    while N_PLAYERS < 3 or N_PLAYERS > 4:
         print("Invalid number of players, try again\n")
-        n_players = int(input("Enter the number of players:  "))
-
-def generate_players(array):
-    for i in range(n_players):
-        user_id = i + 1
-        name = input(f"\nWrite the name of player {user_id}: ")
-        players.append(Player(name, user_id))
-
-    return players
-
-def next_turn():
-    TURN += 1
-    if TURN == n_players:
-        return 1
-
-    return 2
-
-def coin(Player(user_id)):
+        N_PLAYERS = int(input("Enter the number of players: "))
+    print(" ")
     
-    
+    for i in range(N_PLAYERS):
+        name = input(f"Write the name of player {i + 1}: ")
+        coins = 0
+        user_id = i
+        players_list.append(Player(name, coins, user_id))
+
+    return players_list
 
 
+def show_coins(array):
+    print("\nThe balance is: ")
 
-def generate_deck():
-    while i < DECK_MAX:
-        deck.append(Ambassador())
-        deck.append(Assassin())
-        deck.append(Captain())
-        deck.append(Contessa())
-        deck.append(Duke())
-        i += 1
-    
-    random.shuffle(deck)
-    
-    return deck    
+    for (i, _) in enumerate(array):
+        print(f"{array[i].name}: {array[i].coins}")
+
+    return array
+
+
+def next_turn(players):
+
+    print()
 
 
 if __name__ == "__main__":
-    start_game()
+    players = create_players()
+    show_coins(players)
