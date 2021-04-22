@@ -1,5 +1,5 @@
-from card import Card
+from actions import Actions
 
-class Assassin(Card):
 
+class Assassin(Actions):
     def __init__(self, ):

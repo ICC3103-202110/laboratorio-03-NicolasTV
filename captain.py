@@ -1,5 +1,5 @@
-from card import Card
+from actions import Actions
 
-class Captain(Card):
 
+class Captain(Actions):
     def __init__(self, ):

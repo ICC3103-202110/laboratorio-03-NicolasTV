@@ -26,6 +26,6 @@ class Player():
     def user_id(self, value):
         self.__user_id = value
 
-    @user_id.setter
+    @coins.setter
     def coins(self, value):
         self.__coins = value

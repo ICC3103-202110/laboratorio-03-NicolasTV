@@ -1,5 +1,5 @@
-from card import Card
+from actions import Actions
 
-class Duke(Card):
 
+class Duke(Actions):
     def __init__(self, ):

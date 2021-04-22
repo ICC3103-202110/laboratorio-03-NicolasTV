@@ -1,6 +1,5 @@
-from card import Card
+from actions import Actions
 
-class Contessa(Card):
 
+class Contessa(Actions):
     def __init__(self, ):
-        

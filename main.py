@@ -6,8 +6,8 @@ CONTINUE_PLAYING = True
 
 def intro():
     print("\n·················· Welcome to Coup ··················")
-    print("This table game is played with at least 3 players, and"
-          " a maximum of 4.\n")
+    print("This table game is played with at least 3 players "
+          "and maximum 4.\n")
 
 
 def create_players():
@@ -18,7 +18,7 @@ def create_players():
         print("Invalid number of players, try again\n")
         N_PLAYERS = int(input("Enter the number of players: "))
     print(" ")
-    
+
     for i in range(N_PLAYERS):
         name = input(f"Write the name of player {i + 1}: ")
         coins = 0
@@ -33,6 +33,7 @@ def show_coins(array):
 
     for (i, _) in enumerate(array):
         print(f"{array[i].name}: {array[i].coins}")
+    print(" ")
 
     return array
 
@@ -43,5 +44,6 @@ def next_turn(players):
 
 
 if __name__ == "__main__":
+    intro()
     players = create_players()
     show_coins(players)

@@ -1,5 +1,5 @@
-from card import Card
+from actions import Actions
 
-class Ambassador(Card):
 
+class Ambassador(Actions):
     def __init__(self, ):
