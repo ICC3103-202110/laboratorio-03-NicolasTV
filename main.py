@@ -1,5 +1,14 @@
 import random
 from player import Player
+from actions import Actions
+from coup import Coup
+from income import Income
+from foreign_aid import Foreign_aid
+from ambassador import Ambassador
+from assassin import Assassin
+from captain import Captain
+from contessa import Contessa
+from game import Game
 
 CONTINUE_PLAYING = True
 
@@ -23,7 +32,8 @@ def create_players():
         name = input(f"Write the name of player {i + 1}: ")
         coins = 0
         user_id = i
-        players_list.append(Player(name, coins, user_id))
+        playing = True
+        players_list.append(Player(name, coins, user_id, playing))
 
     return players_list
 
@@ -38,9 +48,17 @@ def show_coins(array):
     return array
 
 
-def next_turn(players):
+def next_turn(n, Player.user_id):
+    for i in range(n)
+        if Player.user_id == n:
+            print(f"Is {Player[n].name} turn")
 
-    print()
+            return n-1
+
+        return
+     
+
+    
 
 
 if __name__ == "__main__":
