@@ -1,11 +1,12 @@
-
+from deck import Deck
 
 class Player():
-    def __init__(self, name, user_id, coins, playing):
+    def __init__(self, name, user_id, coins, alive, hand_cards):
         self.__name = name
         self.__user_id = user_id
         self.__coins = coins
-        self.__playing = playing
+        self.__alive = alive
+        self.__hand_cards = hand_cards 
 
     @property
     def name(self):
@@ -20,8 +21,12 @@ class Player():
         return self.__coins
 
     @property
-    def playing(self):
-        return self.__playing
+    def alive(self):
+        return self.__alive
+    
+    @property
+    def hand_cards(self):
+        return self.__hand_cards
 
     @name.setter
     def name(self, value):
@@ -35,6 +40,12 @@ class Player():
     def coins(self, value):
         self.__coins = value
 
-    @playing.setter
-    def playing(self, value):
-        self.__playing = value
+    @alive.setter
+    def alive(self, value):
+        self.__alive = value
+    
+    @hand_cards.setter
+    def hand_cards(self, value):
+        self.__hand_cards = value
+
+    def hand()

@@ -4,10 +4,10 @@ from actions import Actions
 class Captain(Actions):
     def __init__(self, name, action_text, block, check_target):
         super(Captain, self).__init__(name, action_text, block, check_target):
-        name = ["Captain"]
-        action_text = ["Steal 2 gold from a selected player or block a steal"]
-        block = ["Captain"]
-        check_target = True
+        self.__name = ["Captain"]
+        self.__action_text = ["Steal 2 gold from a selected player or block a steal"]
+        self.__block = ["Captain"]
+        self.__check_target = True
 
     def play_captain(self, players, target = None):
         steal = 0

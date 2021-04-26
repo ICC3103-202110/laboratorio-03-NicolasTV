@@ -1,5 +1,6 @@
+from ABC import ABC, abstractmethod
 
-class Actions():
+class Actions(ABC):
     def __init__(self, name, action_text, check_target,
                  coins_needed, block):
         self.__name = name
